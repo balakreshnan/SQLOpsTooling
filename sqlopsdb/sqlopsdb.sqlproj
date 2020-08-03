@@ -140,6 +140,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="scripts\post-handleupdate.sql" />
-    <None Include="wjapool.publish.xml" />
   </ItemGroup>
 </Project>
