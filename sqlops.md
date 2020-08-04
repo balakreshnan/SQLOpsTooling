@@ -108,13 +108,13 @@ If you don't see the project type, then install SQL server tools for visual stud
 - Create Stage called: ReleaseQA
 - Configure Agent details
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa1.jpg "Release QA")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa1.JPG "Release QA")
 
 - Download Publish Artifacts - Connect to above build
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa2.jpg "Release QA")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa2.JPG "Release QA")
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa2-1.jpg "Release QA")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa2-1.JPG "Release QA")
 
 ```
 $(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release\sqlopsdemo.dacpac
@@ -126,24 +126,24 @@ $(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release
 
 - CMD tasks
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa3.jpg "Release QA")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa3.JPG "Release QA")
 
 - Azure SQL Database Task
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4.jpg "Release QA")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4.JPG "Release QA")
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4-1.jpg "Release QA")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4-1.JPG "Release QA")
 
 - Create stage called: Production
 - Configure Agent details
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod1.jpg "Release PROD")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod1.JPG "Release PROD")
 
 - Download Publish Artifacts - Connect to above build
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod2.jpg "Release PROD")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod2.JPG "Release PROD")
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod2-1.jpg "Release PROD")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod2-1.JPG "Release PROD")
 
 ```
 $(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release\sqlopsdemo.dacpac
@@ -155,13 +155,13 @@ $(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release
 
 - CMD tasks
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod3.jpg "Release PROD")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod3.JPG "Release PROD")
 
 - Azure SQL Database Task
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod4.jpg "Release PROD")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod4.JPG "Release PROD")
 
-![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod4-1.jpg "Release PROD")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod4-1.JPG "Release PROD")
 
 Final Release Pipeline should look like below
 
