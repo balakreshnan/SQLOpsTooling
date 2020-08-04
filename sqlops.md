@@ -105,6 +105,9 @@ If you don't see the project type, then install SQL server tools for visual stud
 ## Release Process - QA and Prduction
 
 - Create a New Release and name it New Release Pipeline
+
+## QA
+
 - Create Stage called: ReleaseQA
 - Configure Agent details
 
@@ -133,6 +136,8 @@ $(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release
 ![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4.JPG "Release QA")
 
 ![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4-1.JPG "Release QA")
+
+## Production
 
 - Create stage called: Production
 - Configure Agent details
