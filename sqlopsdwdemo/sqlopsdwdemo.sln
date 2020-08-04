@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "sqlopsdwdemo", "sqlopsdwdemo\sqlopsdwdemo.sqlproj", "{73F185DA-9276-43E0-9F6A-1C7FEC77510D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73F185DA-9276-43E0-9F6A-1C7FEC77510D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F185DA-9276-43E0-9F6A-1C7FEC77510D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F185DA-9276-43E0-9F6A-1C7FEC77510D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{73F185DA-9276-43E0-9F6A-1C7FEC77510D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F185DA-9276-43E0-9F6A-1C7FEC77510D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F185DA-9276-43E0-9F6A-1C7FEC77510D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C266CF3C-F431-4AA1-A375-9C544A114382}
+	EndGlobalSection
+EndGlobal

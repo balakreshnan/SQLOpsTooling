@@ -54,6 +54,10 @@ If you don't see the project type, then install SQL server tools for visual stud
 
 ![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/vsprj2.jpg "Project")
 
+- Azure SQL Data Warehouse
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/vsprj3.jpg "Project")
+
 - Sample SQL project - SQLOpsTooling/sqlopsdemo
 
 ## Azure Devops Build and Release

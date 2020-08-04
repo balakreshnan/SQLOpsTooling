@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[DemoTable] (
+    [col1] INT NOT NULL
+)
+WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = HASH([col1]));
+
