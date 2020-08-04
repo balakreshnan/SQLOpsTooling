@@ -10,9 +10,9 @@
 - Github Repo to Store Code
 - Azure sql database
 
-# Architecture
+## Architecture
 
-![alt text](https://github.com/balakreshnan/WorkplaceSafety/blob/master/WorkplaceSafetyarch.jpg "Architecture")
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/devopsarch.jpg "Architecture")
 
 ## Create Github Repo
 
@@ -33,6 +33,13 @@
 
 - Open Visual Studio
 - Create a new project/solution
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/vsprj1.jpg "Project")
+
+```
+If you don't see the project type, then install SQL server tools for visual studio 2019
+```
+
 - Select SQL Server Database project
 - Give project name as sqlopsdemo
 - Right click Project name and click Import
@@ -43,3 +50,123 @@
 - Wait for import to complete
 - Push changes to github
 
+## Azure Devops Build and Release
+
+## Build Process
+
+- Log into Dev.azure.com
+- Create a New project called sqlopsdemo
+- Connect to above repo
+- Create a Build Pipeline
+- Name the build as: sqlopsdemo-Build
+- First set the agent specification to windows-2019
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build1.jpg "Build")
+
+- Click Get Source and connect to above github repo and select master branch
+- Add New task as Nuget Command Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build2.jpg "Build")
+
+- Add Nuget Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build3.jpg "Build")
+
+- Add Visual Studio Build Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build4.jpg "Build")
+
+- Add CMD task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build5.jpg "Build")
+
+- Copy Files Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build6.jpg "Build")
+
+- Add Azure SQL Database Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build7.jpg "Build")
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build7-1.jpg "Build")
+
+- Copy Files Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build8.jpg "Build")
+
+- Publish Pipeline Artifacts Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/build9.jpg "Build")
+
+- Click Save and Queue
+- Click run logs
+- Wait for Build to complete.
+
+## Release Process - QA and Prduction
+
+- Create a New Release and name it New Release Pipeline
+- Create Stage called: ReleaseQA
+- Configure Agent details
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa1.jpg "Release QA")
+
+- Download Publish Artifacts - Connect to above build
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa2.jpg "Release QA")
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa2-1.jpg "Release QA")
+
+```
+$(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release\sqlopsdemo.dacpac
+```
+
+```
+/p:GenerateSmartDefaults=True /p:BlockOnPossibleDataLoss=True /p:BlockWhenDriftDetected=True
+```
+
+- CMD tasks
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa3.jpg "Release QA")
+
+- Azure SQL Database Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4.jpg "Release QA")
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseqa4-1.jpg "Release QA")
+
+- Create stage called: Production
+- Configure Agent details
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod1.jpg "Release PROD")
+
+- Download Publish Artifacts - Connect to above build
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod2.jpg "Release PROD")
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod2-1.jpg "Release PROD")
+
+```
+$(System.DefaultWorkingDirectory)\DBDeployment\sqlopsdemo\sqlopsdemo\bin\Release\sqlopsdemo.dacpac
+```
+
+```
+/p:GenerateSmartDefaults=True /p:BlockOnPossibleDataLoss=True /p:BlockWhenDriftDetected=True
+```
+
+- CMD tasks
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod3.jpg "Release PROD")
+
+- Azure SQL Database Task
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod4.jpg "Release PROD")
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseprod4-1.jpg "Release PROD")
+
+Final Release Pipeline should look like below
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/releaseall1.jpg "Release ALL")
+
+- Now Save
+- Create New Release
+- Wait for Release to complete without errors. If errors please troubleshoot the errors
