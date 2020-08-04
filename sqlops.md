@@ -49,6 +49,11 @@ If you don't see the project type, then install SQL server tools for visual stud
 - Import the schema
 - Wait for import to complete
 - Push changes to github
+- BUild the project
+- Set up the Target SQL
+
+![alt text](https://github.com/balakreshnan/SQLOpsTooling/blob/master/images/vsprj2.jpg "Project")
+
 - Sample SQL project - SQLOpsTooling/sqlopsdemo
 
 ## Azure Devops Build and Release
