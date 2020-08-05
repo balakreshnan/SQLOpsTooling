@@ -185,3 +185,7 @@ Final Release Pipeline should look like below
 - Now Save
 - Create New Release
 - Wait for Release to complete without errors. If errors please troubleshoot the errors
+
+## Azure Docs
+
+https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-sqldb?view=azure-devops&tabs=yaml
