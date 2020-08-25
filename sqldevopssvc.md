@@ -172,3 +172,6 @@ Write-Host $results
 Write-host "results done"
 $conn.Close()
 ```
+
+- Based on documentation available: 
+https://docs.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-service-principal-tutorial
